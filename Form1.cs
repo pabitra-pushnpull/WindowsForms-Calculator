@@ -181,10 +181,7 @@ namespace Calculator
                 double result = Convert.ToDouble(parts[0]) / Convert.ToDouble(parts[1]);
                 txtBox_Result.Text = result.ToString();
             }
-            
-
-
-
+            //430 546
         }
     }
 }

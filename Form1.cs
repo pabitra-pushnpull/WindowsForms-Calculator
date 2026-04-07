@@ -17,6 +17,7 @@ namespace Calculator
         private void btnOne_Click(object sender, EventArgs e)
         {
             if (txtBox_Result.Text == "0")
+            
                 txtBox_Result.Clear();
 
             Button bt = (Button)sender;

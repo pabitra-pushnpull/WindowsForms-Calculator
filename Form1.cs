@@ -40,7 +40,6 @@ namespace Calculator
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-
             string operation = txtBox_Result.Text;
             int len = operation.Length;
 

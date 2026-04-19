@@ -18,7 +18,7 @@ namespace Calculator
         {
             if (txtBox_Result.Text == "0")
             
-                txtBox_Result.Clear();
+            txtBox_Result.Clear();
 
             Button bt = (Button)sender;
             txtBox_Result.Text += bt.Text;

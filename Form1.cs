@@ -29,6 +29,7 @@ namespace Calculator
 
         private void btnClearAll_Click(object sender, EventArgs e)
         {
+        
             txtBox_Result.Clear();
             txtBox_Result.Text = "0";
         }

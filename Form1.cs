@@ -24,6 +24,7 @@ namespace Calculator
             txtBox_Result.Text += bt.Text;
 
 
+
             txtBox_Result.SelectionStart = txtBox_Result.Text.Length;
             txtBox_Result.ScrollToCaret();
         }

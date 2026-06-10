@@ -325,7 +325,7 @@
             Name = "Form1";
             Text = "Calculator";
             Load += Form1_Load;
-            ResumeLayout(false);
+            ResumeLayout(false );
             PerformLayout();
         }
 

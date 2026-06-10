@@ -17,10 +17,13 @@ namespace Calculator
         private void btnOne_Click(object sender, EventArgs e)
         {
             if (txtBox_Result.Text == "0")
-                txtBox_Result.Clear();
+            
+            txtBox_Result.Clear();
 
             Button bt = (Button)sender;
             txtBox_Result.Text += bt.Text;
+
+
 
             txtBox_Result.SelectionStart = txtBox_Result.Text.Length;
             txtBox_Result.ScrollToCaret();
@@ -28,6 +31,7 @@ namespace Calculator
 
         private void btnClearAll_Click(object sender, EventArgs e)
         {
+        
             txtBox_Result.Clear();
             txtBox_Result.Text = "0";
         }
@@ -39,7 +43,6 @@ namespace Calculator
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-
             string operation = txtBox_Result.Text;
             int len = operation.Length;
 
@@ -47,7 +50,7 @@ namespace Calculator
             {
                 char lastCharacter = operation[len - 1];
 
-                if (lastCharacter == '-' || lastCharacter == '×' || lastCharacter == '/')
+                if (lastCharacter == '-' || lastCharacter == 'Ã—' || lastCharacter == '/')
                 {
                     txtBox_Result.Text = txtBox_Result.Text.Remove(len - 1);
                     txtBox_Result.Text += "+";
@@ -69,7 +72,7 @@ namespace Calculator
             {
                 char lastCharacter = operation[len - 1];
 
-                if (lastCharacter == '+' || lastCharacter == '×' || lastCharacter == '/')
+                if (lastCharacter == '+' || lastCharacter == 'Ã—' || lastCharacter == '/')
                 {
                     txtBox_Result.Text = txtBox_Result.Text.Remove(len - 1);
                     txtBox_Result.Text += "-";
@@ -94,11 +97,11 @@ namespace Calculator
                 if (lastCharacter == '+' || lastCharacter == '-' || lastCharacter == '/')
                 {
                     txtBox_Result.Text = txtBox_Result.Text.Remove(len - 1);
-                    txtBox_Result.Text += "×";
+                    txtBox_Result.Text += "Ã—";
                 }
                 else
                 {
-                    txtBox_Result.Text += "×";
+                    txtBox_Result.Text += "Ã—";
                 }
             }
 
@@ -113,7 +116,7 @@ namespace Calculator
             {
                 char last = operation[len - 1];
 
-                if (last == '+' || last == '-' || last == '×')
+                if (last == '+' || last == '-' || last == 'Ã—')
                 {
                     txtBox_Result.Text = txtBox_Result.Text.Remove(len - 1);
                     txtBox_Result.Text += "/";
@@ -151,7 +154,7 @@ namespace Calculator
         {
             char lastCharacter = txtBox_Result.Text[txtBox_Result.Text.Length - 1];
 
-            if (lastCharacter == '+' || lastCharacter == '-' || lastCharacter == '×' || lastCharacter == '/')
+            if (lastCharacter == '+' || lastCharacter == '-' || lastCharacter == 'Ã—' || lastCharacter == '/')
             {
                 return;
             }
@@ -170,9 +173,9 @@ namespace Calculator
                 double result = Convert.ToDouble(parts[0]) - Convert.ToDouble(parts[1]);
                 txtBox_Result.Text = result.ToString();
             }
-            else if (operation.Contains('×'))
+            else if (operation.Contains('Ã—'))
             {
-                String[] parts = operation.Split('×');
+                String[] parts = operation.Split('Ã—');
                 double result = Convert.ToDouble(parts[0]) * Convert.ToDouble(parts[1]);
                 txtBox_Result.Text = result.ToString();
             }

@@ -150,6 +150,7 @@ namespace Calculator
         private void btnEqual_Click(object sender, EventArgs e)
         {
             char lastCharacter = txtBox_Result.Text[txtBox_Result.Text.Length - 1];
+
             if (lastCharacter == '+' || lastCharacter == '-' || lastCharacter == '×' || lastCharacter == '/')
             {
                 return;

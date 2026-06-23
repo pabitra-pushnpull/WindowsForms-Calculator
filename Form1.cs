@@ -163,6 +163,7 @@ namespace Calculator
 
             if (operation.Contains('+'))
             {
+                //this is for Addition
                 String[] parts = operation.Split('+');
                 double result = Convert.ToDouble(parts[0]) + Convert.ToDouble(parts[1]);
                 txtBox_Result.Text = result.ToString();
